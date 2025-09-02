@@ -1,0 +1,38 @@
+# Core Dependencies
+langchain
+langchain-community
+chromadb
+sentence-transformers
+transformers
+torch
+PyPDF2
+python-docx
+pytesseract
+Pillow
+fastapi
+uvicorn
+pydantic
+numpy
+pandas
+python-multipart
+aiofiles
+
+# Language Support
+indic-nlp-library
+google-trans-new
+
+# Optional: For production deployment
+gunicorn
+redis
+celery
+
+# Development
+pytest
+black
+flake8
+
+pydantic==2.5.0
+numpy==1.24.4
+pandas==2.0.3
+python-multipart==0.0.6
+aiofiles==23.2.0

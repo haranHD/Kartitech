@@ -1,0 +1,74 @@
+2025-09-02 10:08:47,205 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-02 10:08:47,206 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-02 10:08:50,580 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-09-02 10:09:00,435 - src.vector_store - INFO - Created new collection: upsida_documents
+2025-09-02 10:09:00,783 - src.rag_pipeline - INFO - Loading LLM model: microsoft/DialoGPT-medium
+2025-09-02 10:09:04,407 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-09-02 10:09:32,890 - src.rag_pipeline - INFO - LLM model loaded successfully
+2025-09-02 10:09:32,899 - src.chatbot_engine - INFO - ChatbotEngine initialized successfully
+2025-09-02 10:09:32,931 - src.data_ingestion - INFO - Processing document: land_allotment_rules.docx
+2025-09-02 10:09:32,938 - src.data_ingestion - ERROR - Error extracting text from DOCX C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\land_allotment_rules.docx: File is not a zip file
+2025-09-02 10:09:32,939 - src.data_ingestion - WARNING - No text extracted from land_allotment_rules.docx
+2025-09-02 10:09:32,939 - src.data_ingestion - INFO - Processing document: sample_policy.pdf
+2025-09-02 10:09:32,943 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\sample_policy.pdf: Cannot read an empty file
+2025-09-02 10:09:32,943 - src.data_ingestion - WARNING - No text extracted from sample_policy.pdf
+2025-09-02 10:09:32,944 - src.data_ingestion - INFO - Processed 0 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-02 10:09:32,944 - src.rag_pipeline - INFO - Processing query: What is the minimum investment required for land allotment?...
+2025-09-02 10:09:33,267 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:09:33,268 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:09:33,313 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:09:33,314 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:09:33,314 - src.rag_pipeline - INFO - Processing query: What are the payment terms for tenders?...
+2025-09-02 10:09:33,331 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:09:33,331 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:09:33,331 - src.rag_pipeline - INFO - Processing query: Tell me about employment incentives...
+2025-09-02 10:09:33,349 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:09:33,349 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:09:33,369 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:09:33,369 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:09:43,706 - src.rag_pipeline - INFO - Processing query: hi...
+2025-09-02 10:09:43,718 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:09:43,718 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:09:51,448 - src.chatbot_engine - INFO - Feedback received: positive for session interactive_session
+2025-09-02 10:09:53,395 - src.rag_pipeline - INFO - Processing query: asd...
+2025-09-02 10:09:53,412 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:09:53,413 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:09:59,427 - src.chatbot_engine - INFO - Feedback received: positive for session interactive_session
+2025-09-02 10:10:48,670 - src.rag_pipeline - INFO - Processing query: What are the incentives for IT companies?...
+2025-09-02 10:10:48,689 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:10:48,690 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 10:12:29,879 - src.rag_pipeline - INFO - Processing query: what is rag...
+2025-09-02 10:12:29,894 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 10:12:29,894 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 22:07:53,029 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-02 22:07:53,031 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-02 22:07:58,138 - src.vector_store - INFO - Loaded existing collection: upsida_documents
+2025-09-02 22:07:58,517 - src.rag_pipeline - INFO - Loading LLM model: microsoft/DialoGPT-medium
+2025-09-02 22:08:01,640 - src.rag_pipeline - INFO - LLM model loaded successfully
+2025-09-02 22:08:01,640 - src.chatbot_engine - INFO - ChatbotEngine initialized successfully
+2025-09-02 22:08:01,673 - src.data_ingestion - INFO - Processing document: land_allotment_rules.docx
+2025-09-02 22:08:01,678 - src.data_ingestion - ERROR - Error extracting text from DOCX C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\land_allotment_rules.docx: File is not a zip file
+2025-09-02 22:08:01,679 - src.data_ingestion - WARNING - No text extracted from land_allotment_rules.docx
+2025-09-02 22:08:01,680 - src.data_ingestion - INFO - Processing document: sample_policy.pdf
+2025-09-02 22:08:01,684 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\sample_policy.pdf: EOF marker not found
+2025-09-02 22:08:01,685 - src.data_ingestion - WARNING - No text extracted from sample_policy.pdf
+2025-09-02 22:08:01,685 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-02 22:08:07,629 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-02 22:08:07,629 - src.vector_store - INFO - Generating embeddings for 78 chunks...
+2025-09-02 22:08:11,186 - src.vector_store - INFO - Successfully added 78 chunks to vector store
+2025-09-02 22:08:11,188 - src.rag_pipeline - INFO - Processing query: What is the minimum investment required for land allotment?...
+2025-09-02 22:08:11,243 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 22:08:11,244 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 22:08:11,273 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 22:08:11,273 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 22:08:11,274 - src.rag_pipeline - INFO - Processing query: What are the payment terms for tenders?...
+2025-09-02 22:08:11,290 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 22:08:11,291 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 22:08:11,291 - src.rag_pipeline - INFO - Processing query: Tell me about employment incentives...
+2025-09-02 22:08:11,310 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 22:08:11,311 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 22:08:11,333 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 22:08:11,334 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-02 22:08:19,036 - src.rag_pipeline - INFO - Processing query: what is spring?...
+2025-09-02 22:08:19,055 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
+2025-09-02 22:08:19,055 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'

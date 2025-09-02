@@ -1,0 +1,48 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="upsida-ai-chatbot",
+    version="1.0.0",
+    description="AI-Powered Public Chatbot for UPSIDA using RAG Pipeline",
+    author="UPSIDA Development Team",
+    author_email="dev@upsida.gov.in",
+    packages=find_packages(),
+    install_requires=[
+        "langchain>=0.1.20",
+        "langchain-community>=0.0.38",
+        "chromadb>=0.4.22",
+        "sentence-transformers>=2.2.2",
+        "transformers>=4.36.2",
+        "torch>=2.1.2",
+        "PyPDF2>=3.0.1",
+        "python-docx>=1.1.0",
+        "pytesseract>=0.3.10",
+        "Pillow>=10.1.0",
+        "fastapi>=0.104.1",
+        "uvicorn>=0.24.0",
+        "pydantic>=2.5.0",
+        "numpy>=1.24.4",
+        "pandas>=2.1.4",
+        "polyglot>=16.7.4",
+        "indic-nlp-library>=0.81",
+        "google-trans-new>=1.1.9",
+        "googletrans==4.0.0rc1",
+        "pytest>=7.4.3",
+        "black>=23.11.0",
+        "flake8>=6.1.0",
+    ],
+    python_requires=">=3.8",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Government",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+    ],
+    entry_points={
+        'console_scripts': [
+            'upsida-chatbot=main:run_demo',
+        ],
+    },
+)
