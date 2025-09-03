@@ -4,17 +4,21 @@ from pathlib import Path
 import pandas as pd
 import logging
 from datetime import datetime
+from typing import Dict, Any
 
 # Add src to path
 sys.path.append(str(Path(__file__).parent / "src"))
-from config.config import Config
-from src.chatbot_engine import ChatbotEngine
+from config.config import Config as UPSIDAConfig
+from src.chatbot_engine import ChatbotEngine as UPSIDAChatbotEngine
+from config.config_springboot import SpringBootConfig
+from src.rag_pipeline_springboot import SpringBootRAGPipeline
 from src.utils import setup_logging
 from src.data_ingestion import DocumentProcessor
+from src.vector_store import VectorStore
 
 def create_sample_documents():
     """Create sample UPSIDA documents for demonstration"""
-    Config.create_directories()
+    UPSIDAConfig.create_directories()
     # Sample UPSIDA documents content
     sample_docs = {
         "UPSIDA_Land_Allotment_Policy_2024.txt": """UPSIDA Land Allotment Policy 2024
@@ -83,54 +87,35 @@ Section 4: Contract Terms
     }
     # Write sample documents
     for filename, content in sample_docs.items():
-        file_path = Config.DOCUMENTS_DIR / filename
+        file_path = UPSIDAConfig.DOCUMENTS_DIR / filename
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
-    print(f"Created {len(sample_docs)} sample documents in {Config.DOCUMENTS_DIR}")
+    print(f"Created {len(sample_docs)} sample documents in {UPSIDAConfig.DOCUMENTS_DIR}")
 
-def run_demo():
+def run_demo(rag_model: str):
     """Run interactive demo of the chatbot"""
     logger = setup_logging()
     print("\n" + "=" * 50)
-    print("UPSIDA AI Chatbot Demo")
+
+    if rag_model == "springboot":
+        config = SpringBootConfig()
+        print("Spring Boot RAG Chatbot Demo")
+        chatbot = SpringBootChatbotEngine(config)
+    else:
+        config = UPSIDAConfig()
+        print("UPSIDA AI Chatbot Demo")
+        chatbot = UPSIDAChatbotEngine(config)
+    
     print("=" * 50)
+
     # Initialize system
-    config = Config()
     config.create_directories()
-    # Create sample documents if none exist
-    if not any(Config.DOCUMENTS_DIR.iterdir()):
-        print("Creating sample UPSIDA documents...")
-        create_sample_documents()
-    # Initialize chatbot
-    print("Initializing AI Chatbot Engine...")
-    chatbot = ChatbotEngine(config)
+
     # Ingest documents
     print("Processing documents...")
     ingestion_result = chatbot.ingest_documents()
     print(f"Ingestion Status: {ingestion_result['message']}")
-    # Sample test queries
-    sample_queries = [
-        "What is the minimum investment required for land allotment?",
-        "MSME units के लिए क्या incentives हैं?", # Mixed Hindi-English
-        "What are the payment terms for tenders?",
-        "Tell me about employment incentives",
-        "कैंपर में industrial land की rate क्या है?", # Hindi query
-    ]
-    print("\nTesting Sample Queries:")
-    print("-" * 30)
-    for i, query in enumerate(sample_queries, 1):
-        print(f"\n[Query {i}]: {query}")
-        response = chatbot.chat(query, session_id="demo_session")
-        print(f"[Response]: {response['response']['text']}")
-        if response.get('sources'):
-            print("[Sources]:")
-            for source in response['sources'][:2]: # Show top 2 sources
-                print(f"  - {source['document']} (Confidence: {source['similarity_score']:.2f})")
-        # Show bilingual response if different
-        bilingual = response.get('bilingual_response', {})
-        if bilingual.get('primary') != response['response']['text']:
-            print(f"[Hindi]: {bilingual.get('hindi', 'N/A')}")
-    print("-" * 50)
+
     # Interactive mode
     print("\nInteractive Mode (type 'exit' to quit):")
     session_id = "interactive_session"
@@ -138,62 +123,61 @@ def run_demo():
         try:
             user_input = input("\nYou: ").strip()
             if user_input.lower() in ['exit', 'quit', 'bye']:
-                print("Thank you for using UPSIDA AI Chatbot!")
+                print("Thank you for using the AI Chatbot!")
                 break
             if not user_input:
                 continue
             response = chatbot.chat(user_input, session_id=session_id)
-            print(f"\nUPSIDA Bot: {response['response']['text']}")
+            print(f"\nAI Bot: {response['response']['text']}")
             if response.get('sources'):
-                print("\nSources:")
+                print("[Sources]:")
                 for source in response['sources'][:2]:
-                    print(f"  - {source['document']}")
-            #Feedback simulation
-            feedback = input("\nWas this helpful? (y/n/skip): ").strip().lower()
-            if feedback in ['y', 'yes']:
-                chatbot.submit_feedback(session_id, -1, 'positive')
-                print("Thank you for your feedback!")
-            elif feedback in ['n', 'no']:
-                chatbot.submit_feedback(session_id, -1, 'negative')
-                print("Feedback recorded. We'll work to improve!")
+                    print(f"  - {source['document']} (Confidence: {source['similarity_score']:.2f})")
         except KeyboardInterrupt:
             print("\n\nGoodbye!")
             break
         except Exception as e:
             print(f"Error: {e}")
 
-def show_system_status():
-    """Display system status and statistics"""
-    config = Config()
-    chatbot = ChatbotEngine(config)
-    status = chatbot.get_system_status()
-    print("\n" + "=" * 40)
-    print("UPSIDA Chatbot System Status")
-    print("=" * 40)
-    print(f"Status: {status['status']}")
-    print(f"Total Documents: {status.get('vector_store', {}).get('total_chunks', 0)} chunks")
-    print(f"Active Sessions: {status.get('total_sessions', 0)}")
-    print(f"Feedback Entries: {status.get('total_feedback_entries', 0)}")
+class SpringBootChatbotEngine:
+    def __init__(self, config):
+        self.config = config
+        self.conversation_history = {}
+        self.feedback_data = []
+        self.vector_store = VectorStore(config)
+        self.rag_pipeline = SpringBootRAGPipeline(config, self.vector_store)
+        self.document_processor = DocumentProcessor(config)
+
+    def ingest_documents(self, force_reprocess: bool = False) -> Dict[str, Any]:
+        return self.document_processor.process_document_directory(
+            self.config.DOCUMENTS_DIR,
+            target_file_name="spring_boot_tutorial.pdf"
+        )
+    
+    def chat(self, user_query: str, session_id: str) -> Dict[str, Any]:
+        return self.rag_pipeline.process_query(user_query)
 
 if __name__ == "__main__":
-    # Command line interface
     import argparse
-    parser = argparse.ArgumentParser(description="UPSIDA AI Chatbot")
-    parser.add_argument("--demo", action="store_true", help="Run interactive demo")
-    parser.add_argument("--ingest", action="store_true", help="Process documents")
-    parser.add_argument("--status", action="store_true", help="Show system status")
-    parser.add_argument("--reset", action="store_true", help="Reset vector store")
+    parser = argparse.ArgumentParser(description="AI Chatbot")
+    parser.add_argument("--demo", action="store_true", help="Run interactive demo with UPSIDA chatbot")
+    parser.add_argument("--springboot", action="store_true", help="Run interactive demo with Spring Boot RAG model")
+    parser.add_argument("--ingest", action="store_true", help="Process documents for UPSIDA chatbot")
+    parser.add_argument("--ingest-springboot", action="store_true", help="Process documents for Spring Boot RAG model")
+    
     args = parser.parse_args()
 
     if args.demo:
-        run_demo()
+        run_demo("upsida")
+    elif args.springboot:
+        run_demo("springboot")
     elif args.ingest:
-        config = Config()
-        chatbot = ChatbotEngine(config)
-        result = chatbot.ingest_documents(force_reprocess=args.reset)
+        from ingest_upsida import ingest_documents_upsida
+        result = ingest_documents_upsida(force_reprocess=True)
         print(f"Ingestion result: {result}")
-    elif args.status:
-        show_system_status()
+    elif args.ingest_springboot:
+        from ingest_springboot import ingest_documents_springboot
+        result = ingest_documents_springboot(force_reprocess=True)
+        print(f"Ingestion result: {result}")
     else:
-        print("UPSIDA AI Chatbot - Use --demo to start interactive session")
-        run_demo()
+        print("Please use a command-line argument: --demo, --springboot, --ingest, or --ingest-springboot.")
