@@ -1,0 +1,32 @@
+2025-09-05 12:02:35,007 - src.chatbot_engine - INFO - Initializing engine for collection: 'upsida_documents'
+2025-09-05 12:02:35,008 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 12:02:35,008 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 12:02:39,124 - src.vector_store - INFO - Vector store initialized for collection: 'upsida_documents'
+2025-09-05 12:02:39,412 - src.rag_pipeline - INFO - Loading LLM model: google/flan-t5-base
+2025-09-05 12:02:40,854 - src.rag_pipeline - INFO - LLM model initialized successfully.
+2025-09-05 12:02:40,854 - src.chatbot_engine - INFO - Initializing engine for collection: 'springboot_documents'
+2025-09-05 12:02:40,856 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 12:02:40,856 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 12:02:44,085 - src.vector_store - INFO - Vector store initialized for collection: 'springboot_documents'
+2025-09-05 12:02:44,315 - src.rag_pipeline - INFO - Loading LLM model: google/flan-t5-base
+2025-09-05 12:02:46,033 - src.rag_pipeline - INFO - LLM model initialized successfully.
+2025-09-05 12:02:53,988 - src.rag_pipeline - INFO - Processing query: 'what is spring boot...'
+2025-09-05 12:02:54,065 - src.rag_pipeline - INFO - Retrieved 4 relevant chunks.
+2025-09-05 12:04:13,548 - src.rag_pipeline - INFO - Processing query: 'what is database entities...'
+2025-09-05 12:04:13,572 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks.
+2025-09-05 12:04:22,754 - src.rag_pipeline - INFO - Processing query: 'what is spring...'
+2025-09-05 12:04:22,770 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks.
+2025-09-05 12:04:27,361 - src.rag_pipeline - INFO - Processing query: 'spring boot...'
+2025-09-05 12:04:27,374 - src.rag_pipeline - INFO - Retrieved 2 relevant chunks.
+2025-09-05 12:05:58,293 - src.rag_pipeline - INFO - Processing query: 'reduced boilerplate code...'
+2025-09-05 12:05:58,314 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks.
+2025-09-05 12:06:27,384 - src.rag_pipeline - INFO - Processing query: 'what is reduced boilerplate code...'
+2025-09-05 12:06:27,400 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks.
+2025-09-05 12:07:25,497 - src.rag_pipeline - INFO - Processing query: 'Reduced boilerplate code...'
+2025-09-05 12:07:25,509 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks.
+2025-09-05 12:07:33,316 - src.rag_pipeline - INFO - Processing query: 'what is Reduced boilerplate code...'
+2025-09-05 12:07:33,331 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks.
+2025-09-05 12:07:38,609 - src.rag_pipeline - INFO - Processing query: 'spring boot...'
+2025-09-05 12:07:38,625 - src.rag_pipeline - INFO - Retrieved 2 relevant chunks.
+2025-09-05 12:07:51,297 - src.rag_pipeline - INFO - Processing query: 'what is spring boot...'
+2025-09-05 12:07:51,316 - src.rag_pipeline - INFO - Retrieved 4 relevant chunks.

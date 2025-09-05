@@ -1,50 +1,46 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-from typing import List, Dict, Any, Optional
-import logging
-
+from typing import Dict, Any, List, Optional
 from .vector_store import VectorStore
 from .language_detector import LanguageDetector
+import logging
 
 logger = logging.getLogger(__name__)
 
 class SpringBootRAGPipeline:
-    """RAG pipeline for the Spring Boot document"""
+    """Core RAG (Retrieval-Augmented Generation) pipeline"""
     def __init__(self, config, vector_store: VectorStore):
         self.config = config
         self.vector_store = vector_store
         self.language_detector = LanguageDetector()
-
         # Initialize LLM
         self._initialize_llm()
-
         # System prompt for the LLM
-        self.system_prompt = """You are an AI assistant specialized in Spring Boot.
-Your role is to provide accurate, helpful information based ONLY on the Spring Boot tutorial document provided as context.
+        self.system_prompt = """You are an AI assistant who is an expert on the Spring Boot framework.
+Your role is to provide accurate, helpful information based ONLY on the provided context, which is an excerpt from the Spring Boot tutorial.
 
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context.
-2. If the context doesn't contain relevant information, say "I don't have information about this in the available documents."
+2. If the context doesn't contain relevant information, say "I don't have information about this in the available documents"
 3. Be precise and factual - do not speculate or add information not in the context.
-4. For code examples, quote the relevant code blocks directly from the context.
-5. Keep responses clear and concise.
+4. Keep responses clear and concise.
 
 Context: {context}
 
 Query: {query}
 
 Response:"""
-    
+        
     def _initialize_llm(self):
         """Initialize the language model"""
         try:
             logger.info(f"Loading LLM model: {self.config.LLM_MODEL}")
             self.tokenizer = AutoTokenizer.from_pretrained(
-                "microsoft/DialoGPT-small",
+                self.config.LLM_MODEL,
                 padding_side='left'
             )
             self.model = AutoModelForCausalLM.from_pretrained(
-                "microsoft/DialoGPT-small",
+                self.config.LLM_MODEL,
                 torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
                 device_map="auto" if torch.cuda.is_available() else None
             )
@@ -53,7 +49,7 @@ Response:"""
             self.use_pipeline = False
             logger.info("LLM model loaded successfully")
         except Exception as e:
-            logger.error(f"Error loading LLM model: {e}")
+            logger.error(f"Error loading LLM model, falling back to pipeline: {e}")
             self.text_generator = pipeline(
                 "text-generation",
                 model="gpt2",
@@ -62,13 +58,15 @@ Response:"""
             )
             self.use_pipeline = True
 
-    def retrieve_context(self, query: str, top_k: int = None) -> List[Dict[str, Any]]:
+    def retrieve_context(self, query: str, top_k: Optional[int] = None) -> List[Dict[str, Any]]:
         """Retrieve relevant document chunks for the query"""
         if top_k is None:
             top_k = self.config.TOP_K_RESULTS
         
-        # Search vector store
-        results = self.vector_store.search_similar(query, top_k)
+        # Translate query to English if needed for better retrieval
+        english_query = self.language_detector.translate_to_english(query)
+        
+        results = self.vector_store.search_similar(english_query, top_k)
         
         # Filter by similarity threshold
         filtered_results = [
@@ -82,19 +80,16 @@ Response:"""
     def generate_response(self, query: str, context_chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
         """Generate response using LLM with retrieved context"""
         try:
-            # Prepare context
             context_text = "\n\n".join([
                 f"Source: {chunk['metadata']['file_name']}\n{chunk['text']}"
                 for chunk in context_chunks
             ])
 
-            # Create prompt
             prompt = self.system_prompt.format(
-                context=context_text[:2000],  # Limit context length
+                context=context_text[:2000],
                 query=query
             )
-            
-            # Generate response
+
             if self.use_pipeline:
                 response = self.text_generator(
                     prompt,
@@ -120,7 +115,6 @@ Response:"""
                     skip_special_tokens=True
                 ).strip()
 
-            # Prepare source citations
             sources = []
             for chunk in context_chunks:
                 metadata = chunk['metadata']
@@ -145,29 +139,27 @@ Response:"""
                 'query': query,
                 'error': str(e)
             }
-            
+
     def process_query(self, query: str) -> Dict[str, Any]:
         """Complete RAG pipeline: retrieve + generate"""
         logger.info(f"Processing query: {query[:100]}...")
         
-        # Retrieve relevant context
         context_chunks = self.retrieve_context(query)
         
         if not context_chunks:
             response_data = {
-                'response': "I don't have information about this topic in the Spring Boot documents.",
+                'response': "I don't have information about this topic in the available documents. Please try a different query.",
                 'sources': [],
                 'context_used': 0,
                 'query': query
             }
         else:
-            # Generate response
             response_data = self.generate_response(query, context_chunks)
         
-        # No bilingual support needed as the PDF is in English
-        response_data.update({
+        return {
+            'response': {'text': response_data['response'], 'full_response': response_data['response'], 'citations': ""},
+            'session_id': "temp",
+            'sources': response_data['sources'],
             'bilingual_response': {},
-            'detected_language': 'english'
-        })
-        
-        return response_data
+            'metadata': {}
+        }

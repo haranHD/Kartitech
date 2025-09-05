@@ -72,3 +72,336 @@
 2025-09-02 22:08:19,036 - src.rag_pipeline - INFO - Processing query: what is spring?...
 2025-09-02 22:08:19,055 - src.rag_pipeline - INFO - Retrieved 0 relevant chunks for query
 2025-09-02 22:08:19,055 - root - WARNING - Translation to Hindi failed: 'coroutine' object has no attribute 'text'
+2025-09-03 09:56:26,227 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 09:56:26,228 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 09:56:32,104 - src.vector_store - INFO - Created new collection: springboot_documents
+2025-09-03 09:56:32,497 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 09:56:35,524 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 09:58:28,958 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 09:58:28,958 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 09:58:34,240 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 09:58:34,240 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 09:58:34,302 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 09:58:34,318 - src.utils - ERROR - Error during Spring Boot document ingestion: DocumentProcessor.process_document_directory() got an unexpected keyword argument 'target_file_name'
+2025-09-03 10:01:49,842 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 10:01:49,842 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 10:01:54,585 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 10:01:54,585 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 10:01:54,626 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 10:01:54,630 - src.utils - ERROR - Error during Spring Boot document ingestion: DocumentProcessor.process_document_directory() got an unexpected keyword argument 'target_file_name'
+2025-09-03 10:02:25,194 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 10:02:25,195 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 10:02:29,764 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 10:02:30,092 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 10:02:33,205 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 10:08:07,505 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 10:08:07,505 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 10:08:12,666 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 10:08:12,972 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 10:08:15,230 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 10:08:15,232 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 10:08:21,028 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 10:08:36,781 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 10:08:36,781 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 10:08:41,642 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 10:08:41,642 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 10:08:41,671 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 10:08:41,675 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 10:08:47,613 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 10:08:47,613 - src.vector_store - INFO - Generating embeddings for 78 chunks...
+2025-09-03 10:08:51,060 - src.vector_store - INFO - Successfully added 78 chunks to vector store
+2025-09-03 10:09:00,600 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 10:09:00,600 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 10:09:06,143 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 10:09:06,497 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 10:09:08,839 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 10:09:08,841 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 10:09:14,537 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 10:19:58,992 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 10:19:58,993 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 10:20:04,360 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 10:20:04,360 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 10:20:04,519 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 10:20:04,531 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 10:20:11,442 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 10:20:11,443 - src.vector_store - INFO - Generating embeddings for 78 chunks...
+2025-09-03 10:20:15,571 - src.vector_store - INFO - Successfully added 78 chunks to vector store
+2025-09-03 10:20:26,456 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 10:20:26,456 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 10:20:31,713 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 10:20:32,152 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 10:20:34,867 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 10:20:34,869 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 10:20:42,188 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 10:20:42,189 - src.vector_store - INFO - Generating embeddings for 78 chunks...
+2025-09-03 10:20:46,311 - src.vector_store - INFO - Successfully added 78 chunks to vector store
+2025-09-03 10:20:56,912 - src.rag_pipeline_springboot - INFO - Processing query: what is spring...
+2025-09-03 10:20:57,041 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 10:21:06,049 - src.rag_pipeline_springboot - INFO - Processing query: what is springboot...
+2025-09-03 10:21:06,067 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 10:21:30,571 - src.rag_pipeline_springboot - INFO - Processing query: tell me about the springboot ?...
+2025-09-03 10:21:30,596 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 18:25:24,391 - src.rag_pipeline_springboot - INFO - Processing query: hi...
+2025-09-03 18:25:25,208 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 18:25:35,342 - src.rag_pipeline_springboot - INFO - Processing query: 1...
+2025-09-03 18:25:35,370 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 18:25:37,737 - src.rag_pipeline_springboot - INFO - Processing query: 12...
+2025-09-03 18:25:37,759 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 18:28:02,855 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:28:02,855 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:28:07,916 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:28:07,916 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 18:28:08,132 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 18:28:08,142 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:28:08,144 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\spring_boot_tutorial.pdf: Cannot read an empty file
+2025-09-03 18:28:08,144 - src.data_ingestion - WARNING - No text extracted from spring_boot_tutorial.pdf
+2025-09-03 18:28:08,144 - src.data_ingestion - INFO - Processed 0 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:30:02,414 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:30:02,415 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:30:07,323 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:30:07,324 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 18:30:07,380 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 18:30:07,391 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:30:07,393 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\spring_boot_tutorial.pdf: EOF marker not found
+2025-09-03 18:30:07,393 - src.data_ingestion - WARNING - No text extracted from spring_boot_tutorial.pdf
+2025-09-03 18:30:07,394 - src.data_ingestion - INFO - Processed 0 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:30:20,084 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:30:20,085 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:30:24,340 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:30:24,793 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 18:30:27,700 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 18:30:27,703 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:30:27,706 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\spring_boot_tutorial.pdf: EOF marker not found
+2025-09-03 18:30:27,707 - src.data_ingestion - WARNING - No text extracted from spring_boot_tutorial.pdf
+2025-09-03 18:30:27,708 - src.data_ingestion - INFO - Processed 0 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:30:36,893 - src.rag_pipeline_springboot - INFO - Processing query: what is spring...
+2025-09-03 18:30:37,160 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 18:35:58,077 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:35:58,078 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:36:01,830 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:36:01,831 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 18:36:01,885 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 18:36:01,890 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:36:01,891 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\spring_boot_tutorial.pdf: EOF marker not found
+2025-09-03 18:36:01,892 - src.data_ingestion - WARNING - No text extracted from spring_boot_tutorial.pdf
+2025-09-03 18:36:01,892 - src.data_ingestion - INFO - Processed 0 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:37:47,959 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:37:47,960 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:37:52,092 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:37:52,093 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 18:37:52,125 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 18:37:52,127 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:37:52,128 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\spring_boot_tutorial.pdf: EOF marker not found
+2025-09-03 18:37:52,128 - src.data_ingestion - WARNING - No text extracted from spring_boot_tutorial.pdf
+2025-09-03 18:37:52,128 - src.data_ingestion - INFO - Processed 0 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:38:00,454 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:38:00,455 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:38:04,433 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:38:07,162 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:38:07,165 - src.data_ingestion - ERROR - Error extracting text from PDF C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents\spring_boot_tutorial.pdf: EOF marker not found
+2025-09-03 18:38:07,165 - src.data_ingestion - WARNING - No text extracted from spring_boot_tutorial.pdf
+2025-09-03 18:38:07,167 - src.data_ingestion - INFO - Processed 0 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:47:34,493 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:47:34,494 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:47:38,325 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:47:38,326 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 18:47:38,384 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 18:47:38,388 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:47:38,399 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:47:38,399 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-03 18:47:38,562 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-03 18:47:50,373 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:47:50,373 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:47:54,854 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:47:57,371 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:47:57,377 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:47:57,377 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-03 18:47:57,519 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-03 18:57:46,512 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:57:46,513 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:57:50,805 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:57:50,805 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 18:57:50,881 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 18:57:50,884 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:57:50,890 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:57:50,890 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-03 18:57:51,051 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-03 18:57:59,831 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 18:57:59,831 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 18:58:03,420 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 18:58:03,738 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 18:58:05,792 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 18:58:05,794 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 18:58:05,811 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 18:58:05,811 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-03 18:58:06,853 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-03 18:58:13,755 - src.rag_pipeline_springboot - INFO - Processing query: What are the main features of Spring Boot...
+2025-09-03 18:58:13,816 - src.rag_pipeline_springboot - INFO - Retrieved 1 relevant chunks for query
+2025-09-03 18:58:39,615 - src.rag_pipeline_springboot - INFO - Processing query: what is spring...
+2025-09-03 18:58:39,632 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 18:58:44,711 - src.rag_pipeline_springboot - INFO - Processing query: what is spring boot...
+2025-09-03 18:58:44,724 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 18:58:52,029 - src.rag_pipeline_springboot - INFO - Processing query: Explain the layers of the Spring Boot architecture...
+2025-09-03 18:58:52,043 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 19:05:24,524 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 19:05:24,525 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 19:05:28,836 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 19:05:28,836 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-03 19:05:28,875 - src.vector_store - INFO - Vector store reset successfully
+2025-09-03 19:05:28,883 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 19:05:28,892 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 19:05:28,893 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-03 19:05:29,173 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-03 19:05:37,868 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-03 19:05:37,868 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-03 19:05:41,475 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-03 19:05:41,813 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-03 19:05:44,290 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-03 19:05:44,291 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-03 19:05:44,304 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-03 19:05:44,304 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-03 19:05:44,629 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-03 19:05:53,509 - src.rag_pipeline_springboot - INFO - Processing query: what is spring boot...
+2025-09-03 19:05:53,556 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-03 19:06:14,976 - src.rag_pipeline_springboot - INFO - Processing query: Explain the layers of the Spring Boot architecture...
+2025-09-03 19:06:14,993 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-04 21:56:43,271 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-04 21:56:43,273 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-04 21:56:47,749 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-04 21:56:47,749 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-04 21:56:47,794 - src.vector_store - INFO - Vector store reset successfully
+2025-09-04 21:56:47,804 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-04 21:56:47,814 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-04 21:56:47,815 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-04 21:56:48,122 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-04 22:02:06,792 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-04 22:02:06,793 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-04 22:02:12,618 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-04 22:02:12,972 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-04 22:02:16,360 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-04 22:02:16,361 - src.data_ingestion - INFO - Processing document: spring_boot_tutorial.pdf
+2025-09-04 22:02:16,372 - src.data_ingestion - INFO - Processed 1 documents from C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\documents
+2025-09-04 22:02:16,372 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-04 22:02:16,676 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-04 22:03:11,426 - src.rag_pipeline_springboot - INFO - Processing query: what is spring boot...
+2025-09-04 22:03:11,478 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-04 22:06:16,152 - src.rag_pipeline_springboot - INFO - Processing query: what is Spring Boot Architecture?...
+2025-09-04 22:06:16,176 - src.rag_pipeline_springboot - INFO - Retrieved 1 relevant chunks for query
+2025-09-05 10:33:15,932 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:33:15,932 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:33:20,285 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:33:20,285 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 10:33:20,330 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 10:33:20,339 - src.utils - ERROR - Error during Spring Boot document ingestion: DocumentProcessor.process_document_directory() got an unexpected keyword argument 'target_file_name'
+2025-09-05 10:34:37,479 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:34:37,480 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:34:41,987 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:34:41,987 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 10:34:42,024 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 10:34:42,028 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:34:42,034 - src.data_ingestion - INFO - Extracting text directly from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:34:42,044 - src.data_ingestion - INFO - Saving processed data to 'C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\processed_springboot\37c9dd3e8d9801a53f2b5afc4ece229c.json'.
+2025-09-05 10:34:42,046 - src.data_ingestion - INFO - Finished processing. Found and processed 1 documents.
+2025-09-05 10:34:42,046 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-05 10:34:42,333 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-05 10:34:52,868 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:34:52,870 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:34:56,830 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:34:57,225 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-05 10:34:59,669 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-05 10:34:59,671 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:34:59,674 - src.data_ingestion - INFO - Extracting text directly from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:34:59,681 - src.data_ingestion - INFO - Saving processed data to 'C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\processed_springboot\37c9dd3e8d9801a53f2b5afc4ece229c.json'.
+2025-09-05 10:34:59,682 - src.data_ingestion - INFO - Finished processing. Found and processed 1 documents.
+2025-09-05 10:34:59,682 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-05 10:34:59,826 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-05 10:35:46,885 - src.rag_pipeline_springboot - INFO - Processing query: what is spring boot ?...
+2025-09-05 10:35:46,978 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-05 10:36:12,463 - src.rag_pipeline_springboot - INFO - Processing query: what is in the document...
+2025-09-05 10:36:12,483 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-05 10:37:37,977 - src.rag_pipeline_springboot - INFO - Processing query: what is java framework?...
+2025-09-05 10:37:37,998 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-05 10:41:11,674 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:41:11,674 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:41:15,873 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:41:15,874 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 10:41:15,961 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 10:41:15,964 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:41:15,969 - src.data_ingestion - INFO - Extracting text directly from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:41:15,974 - src.data_ingestion - INFO - Saving processed data to 'C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\processed_springboot\37c9dd3e8d9801a53f2b5afc4ece229c.json'.
+2025-09-05 10:41:15,976 - src.data_ingestion - INFO - Finished processing. Found and processed 1 documents.
+2025-09-05 10:41:15,976 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-05 10:41:16,155 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-05 10:41:24,826 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:41:24,826 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:41:29,550 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:41:29,968 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-05 10:41:33,641 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-05 10:41:33,648 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:41:34,360 - src.data_ingestion - INFO - Extracting text directly from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:41:35,937 - src.data_ingestion - INFO - Saving processed data to 'C:\Users\haran\OneDrive\Desktop\Kartitech\Document-AI\upsida_chatbot\data\processed_springboot\37c9dd3e8d9801a53f2b5afc4ece229c.json'.
+2025-09-05 10:41:35,940 - src.data_ingestion - INFO - Finished processing. Found and processed 1 documents.
+2025-09-05 10:41:35,942 - src.vector_store - INFO - Generating embeddings for 1 chunks...
+2025-09-05 10:41:39,541 - src.vector_store - INFO - Successfully added 1 chunks to vector store
+2025-09-05 10:41:59,424 - src.rag_pipeline_springboot - INFO - Processing query: what is spring boot...
+2025-09-05 10:41:59,480 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-05 10:42:34,012 - src.rag_pipeline_springboot - INFO - Processing query: what is spring applications?...
+2025-09-05 10:42:34,032 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-05 10:43:47,930 - src.rag_pipeline_springboot - INFO - Processing query: Explain what an embedded server is...
+2025-09-05 10:43:47,963 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-05 10:46:54,170 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:46:54,170 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:46:58,881 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:46:58,883 - src.utils - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 10:46:58,945 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 10:46:58,949 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:46:58,951 - src.data_ingestion - ERROR - Failed to process PDF file 'spring_boot_tutorial.pdf': EOF marker not found
+2025-09-05 10:46:58,951 - src.data_ingestion - WARNING - No text was extracted from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:46:58,952 - src.data_ingestion - INFO - Finished processing. Found and processed 0 documents.
+2025-09-05 10:50:03,898 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:50:03,898 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:50:08,402 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:50:08,402 - root - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 10:50:08,441 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 10:50:08,444 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:50:08,445 - src.data_ingestion - ERROR - Failed to process PDF file 'spring_boot_tutorial.pdf': EOF marker not found
+2025-09-05 10:50:08,445 - src.data_ingestion - WARNING - No text was extracted from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:50:08,445 - src.data_ingestion - INFO - Finished processing. Found and processed 0 documents.
+2025-09-05 10:53:43,986 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:53:43,986 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:53:48,017 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:53:48,017 - root - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 10:53:48,045 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 10:53:48,048 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:53:48,049 - src.data_ingestion - ERROR - Failed to process PDF file 'spring_boot_tutorial.pdf': EOF marker not found
+2025-09-05 10:53:48,049 - src.data_ingestion - WARNING - No text was extracted from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:53:48,050 - src.data_ingestion - INFO - Finished processing. Found and processed 0 documents.
+2025-09-05 10:54:11,679 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:54:11,679 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:54:15,656 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:54:16,001 - src.rag_pipeline_springboot - INFO - Loading LLM model: microsoft/DialoGPT-small
+2025-09-05 10:54:18,163 - src.rag_pipeline_springboot - INFO - LLM model loaded successfully
+2025-09-05 10:54:18,165 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:54:18,167 - src.data_ingestion - ERROR - Failed to process PDF file 'spring_boot_tutorial.pdf': EOF marker not found
+2025-09-05 10:54:18,168 - src.data_ingestion - WARNING - No text was extracted from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:54:18,168 - src.data_ingestion - INFO - Finished processing. Found and processed 0 documents.
+2025-09-05 10:54:26,494 - src.rag_pipeline_springboot - INFO - Processing query: what is spring boot...
+2025-09-05 10:54:26,558 - src.rag_pipeline_springboot - INFO - Retrieved 0 relevant chunks for query
+2025-09-05 10:55:17,957 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 10:55:17,957 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 10:55:22,334 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 10:55:22,335 - root - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 10:55:22,364 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 10:55:22,370 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 10:55:22,371 - src.data_ingestion - ERROR - Failed to process PDF file 'spring_boot_tutorial.pdf': EOF marker not found
+2025-09-05 10:55:22,371 - src.data_ingestion - WARNING - No text was extracted from 'spring_boot_tutorial.pdf'.
+2025-09-05 10:55:22,372 - src.data_ingestion - INFO - Finished processing. Found and processed 0 documents.
+2025-09-05 11:01:11,662 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-09-05 11:01:11,662 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-09-05 11:01:16,458 - src.vector_store - INFO - Loaded existing collection: springboot_documents
+2025-09-05 11:01:16,459 - root - INFO - Force reprocessing for Spring Boot docs - resetting vector store
+2025-09-05 11:01:16,489 - src.vector_store - INFO - Vector store reset successfully
+2025-09-05 11:01:16,491 - src.data_ingestion - INFO - Processing document: 'spring_boot_tutorial.pdf'
+2025-09-05 11:01:16,492 - src.data_ingestion - ERROR - Failed to read PDF file 'spring_boot_tutorial.pdf': EOF marker not found. The file may be corrupted.
+2025-09-05 11:01:16,493 - src.data_ingestion - WARNING - No text was extracted from 'spring_boot_tutorial.pdf'.
+2025-09-05 11:01:16,493 - src.data_ingestion - INFO - Finished processing. Found and processed 0 documents.

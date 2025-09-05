@@ -1,38 +1,24 @@
-# Core Dependencies
+#Core LangChain and Vector Store
 langchain
 langchain-community
 chromadb
+
+#Sentence Transformers for Text Embeddings
 sentence-transformers
+
+#Hugging Face Transformers and PyTorch for the Language Model
 transformers
 torch
+
+#Document Processing Libraries
 PyPDF2
 python-docx
 pytesseract
 Pillow
-fastapi
-uvicorn
-pydantic
-numpy
-pandas
-python-multipart
-aiofiles
+googletrans==4.0.0rc1
+pdf2image
 
-# Language Support
-indic-nlp-library
-google-trans-new
-
-# Optional: For production deployment
-gunicorn
-redis
-celery
-
-# Development
-pytest
-black
-flake8
-
-pydantic==2.5.0
-numpy==1.24.4
-pandas==2.0.3
-python-multipart==0.0.6
-aiofiles==23.2.0
+#Performance Libraries for Transformers
+accelerate
+bitsandbytes
+safetensors

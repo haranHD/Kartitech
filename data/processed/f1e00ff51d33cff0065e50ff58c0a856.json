@@ -1,0 +1,40 @@
+{
+    "document_id": "f1e00ff51d33cff0065e50ff58c0a856",
+    "metadata": {
+        "file_name": "spring_boot_tutorial.pdf",
+        "file_path": "C:\\Users\\haran\\OneDrive\\Desktop\\Kartitech\\Document-AI\\upsida_chatbot\\data\\documents\\spring_boot_tutorial.pdf",
+        "file_size": 3955,
+        "created_date": 1757053532.5732942,
+        "modified_date": 1756905336.3751936,
+        "file_type": ".pdf"
+    },
+    "full_text": "Spring Boot Overview Introduction Spring Boot is an open-source Java-based framework used to create microservices, web applications, and enterprise-ready applications. It simplifies the setup, development, and deployment of Spring applications by eliminating boilerplate code and configuration. Features of Spring Boot - Auto-Configuration: Automatically configures Spring applications based on the dependencies present. - Standalone Applications: Allows running applications independently without requiring an external server. - Embedded Servers: Provides embedded servers like Tomcat, Jetty, and Undertow. - Opinionated Defaults: Offers default configurations for quicker development. - Production-Ready Features: Includes metrics, health checks, and externalized configuration. Spring Boot Architecture Spring Boot follows a layered architecture: 1. Presentation Layer: Handles HTTP requests (controllers). 2. Business Layer: Contains service classes with business logic. 3. Persistence Layer: Manages database operations using repositories. 4. Database Layer: Stores application data. This architecture ensures separation of concerns and modular development. Spring Boot Annotations - @SpringBootApplication: Main entry point for Spring Boot applications. - @RestController: Defines RESTful web services. - @RequestMapping: Maps HTTP requests to handler methods. - @Autowired: Enables dependency injection. - @Entity: Defines database entities. - @Repository: Marks repository classes. Spring Boot Workflow 1. Developer creates a Spring Boot project using Spring Initializr or manually. 2. Application dependencies are managed via Maven or Gradle. 3. The main class annotated with @SpringBootApplication is executed. 4. Embedded server (Tomcat/Jetty) starts automatically. 5. Application is ready to serve requests without additional configuration. Advantages of Spring Boot - Rapid application development. - Reduced boilerplate code. - Easy integration with databases and third-party tools. - Microservices support. - Strong community support and documentation. Use Cases of Spring Boot - RESTful API Development. - Microservices Architecture. - Enterprise Applications. - Cloud-Native Applications. - Standalone Command-Line Applications. Conclusion Spring Boot is a powerful framework that simplifies Java application development. Its opinionated approach, production-ready features, and seamless integration with the Spring ecosystem make it the preferred choice for modern application development.",
+    "chunks": [
+        {
+            "text": "Spring Boot Overview Introduction Spring Boot is an open-source Java-based framework used to create microservices, web applications, and enterprise-ready applications. It simplifies the setup, development, and deployment of Spring applications by eliminating boilerplate code and configuration. Features of Spring Boot - Auto-Configuration: Automatically configures Spring applications based on the dependencies present. - Standalone Applications: Allows running applications independently without requiring an external server. - Embedded Servers: Provides embedded servers like Tomcat, Jetty, and Undertow. - Opinionated Defaults: Offers default configurations for quicker development. - Production-Ready Features: Includes metrics, health checks, and externalized configuration. Spring Boot Architecture Spring Boot follows a",
+            "start_word_index": 0,
+            "end_word_index": 100,
+            "chunk_index": 0
+        },
+        {
+            "text": "for quicker development. - Production-Ready Features: Includes metrics, health checks, and externalized configuration. Spring Boot Architecture Spring Boot follows a layered architecture: 1. Presentation Layer: Handles HTTP requests (controllers). 2. Business Layer: Contains service classes with business logic. 3. Persistence Layer: Manages database operations using repositories. 4. Database Layer: Stores application data. This architecture ensures separation of concerns and modular development. Spring Boot Annotations - @SpringBootApplication: Main entry point for Spring Boot applications. - @RestController: Defines RESTful web services. - @RequestMapping: Maps HTTP requests to handler methods. - @Autowired: Enables dependency injection. - @Entity: Defines database entities. - @Repository: Marks",
+            "start_word_index": 80,
+            "end_word_index": 180,
+            "chunk_index": 1
+        },
+        {
+            "text": "@RequestMapping: Maps HTTP requests to handler methods. - @Autowired: Enables dependency injection. - @Entity: Defines database entities. - @Repository: Marks repository classes. Spring Boot Workflow 1. Developer creates a Spring Boot project using Spring Initializr or manually. 2. Application dependencies are managed via Maven or Gradle. 3. The main class annotated with @SpringBootApplication is executed. 4. Embedded server (Tomcat/Jetty) starts automatically. 5. Application is ready to serve requests without additional configuration. Advantages of Spring Boot - Rapid application development. - Reduced boilerplate code. - Easy integration with databases and third-party tools. - Microservices support. - Strong community support and documentation.",
+            "start_word_index": 160,
+            "end_word_index": 260,
+            "chunk_index": 2
+        },
+        {
+            "text": "Reduced boilerplate code. - Easy integration with databases and third-party tools. - Microservices support. - Strong community support and documentation. Use Cases of Spring Boot - RESTful API Development. - Microservices Architecture. - Enterprise Applications. - Cloud-Native Applications. - Standalone Command-Line Applications. Conclusion Spring Boot is a powerful framework that simplifies Java application development. Its opinionated approach, production-ready features, and seamless integration with the Spring ecosystem make it the preferred choice for modern application development.",
+            "start_word_index": 240,
+            "end_word_index": 315,
+            "chunk_index": 3
+        }
+    ],
+    "chunk_count": 4,
+    "processed_date": "2025-09-05T12:02:25.150122"
+}

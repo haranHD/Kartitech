@@ -3,7 +3,7 @@ from pathlib import Path
 import logging
 from typing import Dict
 
-from transformers import Any
+from typing import Any
 
 # Add src to path
 sys.path.append(str(Path(__file__).parent / "src"))
